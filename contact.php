@@ -29,16 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $headers .= "Reply-To: " . $email . "\r\n";
 
   // Send email
- /* if (mail($to, $subject, $messageBody, $headers)) {
+ if (mail($to, $subject, $messageBody, $headers)) {
     // Email sent successfully
-    echo "Thank you for your message! We will be in touch soon.";
+    echo "<script>alert('Thank you for your message! We will be in touch soon.'); window.location.href = 'contact.html';</script>";
   } else {
     // Email sending failed
-    echo "Oops! Something went wrong. Please try again later.";
+    echo "<script>alert('Oops! Something went wrong. Please try again later.');</script>";
   }
-*/
-    // Email sent successfully
-    echo "<script>alert('Thank you for your message! Form Submitted Successfully.'); window.location.href = 'contact.html';</script>";
     
 } else {
   // Form not submitted
